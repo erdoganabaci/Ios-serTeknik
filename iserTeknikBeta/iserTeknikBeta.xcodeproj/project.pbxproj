@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0372963E5C60D20BFF90B472 /* Pods_iserTeknikBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C79A7FEAE68E1CCB39667E35 /* Pods_iserTeknikBeta.framework */; };
+		EAC83540487185C841226C91 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD91C9615A256B702FF8C38 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		F20DC6D222F7241D006FE74D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DC6D122F7241D006FE74D /* AppDelegate.swift */; };
 		F20DC6D422F7241D006FE74D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DC6D322F7241D006FE74D /* ViewController.swift */; };
 		F20DC6D722F7241D006FE74D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20DC6D522F7241D006FE74D /* Main.storyboard */; };
@@ -17,10 +18,42 @@
 		F20DC6E622F724B1006FE74D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DC6E522F724B1006FE74D /* SecondViewController.swift */; };
 		F20DC6E922F776B8006FE74D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20DC6E822F776B8006FE74D /* WebKit.framework */; };
 		F23A377022F799240090A2D0 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F23A376F22F799240090A2D0 /* loading.json */; };
+		F23A377222F79E460090A2D0 /* teknik.json in Resources */ = {isa = PBXBuildFile; fileRef = F23A377122F79E450090A2D0 /* teknik.json */; };
+		F2B8456A22F8118200E3D410 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8456922F8118200E3D410 /* NotificationService.swift */; };
+		F2B8456E22F8118200E3D410 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457322F8177100E3D410 /* GoogleService-Info.plist */; };
+		F2B8457622F8639100E3D410 /* mobile.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457522F8639100E3D410 /* mobile.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F2B8456C22F8118200E3D410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20DC6C622F7241D006FE74D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2B8456622F8118200E3D410;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2B8457222F8118200E3D410 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F2B8456E22F8118200E3D410 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		50DED72C992917B8E4F14CEA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		570976546C29205CCD04C32D /* Pods-iserTeknikBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iserTeknikBeta.debug.xcconfig"; path = "Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta.debug.xcconfig"; sourceTree = "<group>"; };
+		7AD91C9615A256B702FF8C38 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A51B5ED6DB8145C6FFB0AA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		A9F69DD226BBFDBDBE527BF8 /* Pods-iserTeknikBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iserTeknikBeta.release.xcconfig"; path = "Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta.release.xcconfig"; sourceTree = "<group>"; };
 		C79A7FEAE68E1CCB39667E35 /* Pods_iserTeknikBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iserTeknikBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20DC6CE22F7241D006FE74D /* iserTeknikBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iserTeknikBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +67,13 @@
 		F20DC6E522F724B1006FE74D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F20DC6E822F776B8006FE74D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F23A376F22F799240090A2D0 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		F23A377122F79E450090A2D0 /* teknik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teknik.json; sourceTree = "<group>"; };
+		F2B8456222F8081300E3D410 /* iserTeknikBeta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iserTeknikBeta.entitlements; sourceTree = "<group>"; };
+		F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B8456922F8118200E3D410 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F2B8456B22F8118200E3D410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B8457322F8177100E3D410 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F2B8457522F8639100E3D410 /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +86,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2B8456422F8118200E3D410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAC83540487185C841226C91 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +102,8 @@
 			children = (
 				570976546C29205CCD04C32D /* Pods-iserTeknikBeta.debug.xcconfig */,
 				A9F69DD226BBFDBDBE527BF8 /* Pods-iserTeknikBeta.release.xcconfig */,
+				8A51B5ED6DB8145C6FFB0AA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				50DED72C992917B8E4F14CEA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -62,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				F20DC6D022F7241D006FE74D /* iserTeknikBeta */,
+				F2B8456822F8118200E3D410 /* OneSignalNotificationServiceExtension */,
 				F20DC6CF22F7241D006FE74D /* Products */,
 				F20DC6E722F776B8006FE74D /* Frameworks */,
 				74A01147EA4A4F5643085188 /* Pods */,
@@ -72,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F20DC6CE22F7241D006FE74D /* iserTeknikBeta.app */,
+				F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +131,9 @@
 		F20DC6D022F7241D006FE74D /* iserTeknikBeta */ = {
 			isa = PBXGroup;
 			children = (
+				F2B8456222F8081300E3D410 /* iserTeknikBeta.entitlements */,
+				F2B8457522F8639100E3D410 /* mobile.json */,
+				F23A377122F79E450090A2D0 /* teknik.json */,
 				F23A376F22F799240090A2D0 /* loading.json */,
 				F20DC6D122F7241D006FE74D /* AppDelegate.swift */,
 				F20DC6D322F7241D006FE74D /* ViewController.swift */,
@@ -88,6 +143,7 @@
 				F20DC6D822F7241E006FE74D /* Assets.xcassets */,
 				F20DC6DA22F7241E006FE74D /* LaunchScreen.storyboard */,
 				F20DC6DD22F7241E006FE74D /* Info.plist */,
+				F2B8457322F8177100E3D410 /* GoogleService-Info.plist */,
 			);
 			path = iserTeknikBeta;
 			sourceTree = "<group>";
@@ -97,8 +153,18 @@
 			children = (
 				F20DC6E822F776B8006FE74D /* WebKit.framework */,
 				C79A7FEAE68E1CCB39667E35 /* Pods_iserTeknikBeta.framework */,
+				7AD91C9615A256B702FF8C38 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2B8456822F8118200E3D410 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F2B8456922F8118200E3D410 /* NotificationService.swift */,
+				F2B8456B22F8118200E3D410 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,15 +179,36 @@
 				F20DC6CB22F7241D006FE74D /* Frameworks */,
 				F20DC6CC22F7241D006FE74D /* Resources */,
 				61A827779900E954D84DA252 /* [CP] Embed Pods Frameworks */,
+				F2B8457222F8118200E3D410 /* Embed App Extensions */,
+				484166F01CF6A9C65A4DFDAE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F2B8456D22F8118200E3D410 /* PBXTargetDependency */,
 			);
 			name = iserTeknikBeta;
 			productName = iserTeknikBeta;
 			productReference = F20DC6CE22F7241D006FE74D /* iserTeknikBeta.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F2B8456622F8118200E3D410 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2B8456F22F8118200E3D410 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				B07AF92C07AD76C7F7BF5BD0 /* [CP] Check Pods Manifest.lock */,
+				F2B8456322F8118200E3D410 /* Sources */,
+				F2B8456422F8118200E3D410 /* Frameworks */,
+				F2B8456522F8118200E3D410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -134,6 +221,20 @@
 				ORGANIZATIONNAME = Erdogan;
 				TargetAttributes = {
 					F20DC6CD22F7241D006FE74D = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					F2B8456622F8118200E3D410 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -152,6 +253,7 @@
 			projectRoot = "";
 			targets = (
 				F20DC6CD22F7241D006FE74D /* iserTeknikBeta */,
+				F2B8456622F8118200E3D410 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -161,10 +263,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23A377222F79E460090A2D0 /* teknik.json in Resources */,
 				F20DC6DC22F7241E006FE74D /* LaunchScreen.storyboard in Resources */,
+				F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */,
+				F2B8457622F8639100E3D410 /* mobile.json in Resources */,
 				F23A377022F799240090A2D0 /* loading.json in Resources */,
 				F20DC6D922F7241E006FE74D /* Assets.xcassets in Resources */,
 				F20DC6D722F7241D006FE74D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2B8456522F8118200E3D410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +305,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		484166F01CF6A9C65A4DFDAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61A827779900E954D84DA252 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +339,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iserTeknikBeta/Pods-iserTeknikBeta-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B07AF92C07AD76C7F7BF5BD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -224,7 +375,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2B8456322F8118200E3D410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B8456A22F8118200E3D410 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2B8456D22F8118200E3D410 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2B8456622F8118200E3D410 /* OneSignalNotificationServiceExtension */;
+			targetProxy = F2B8456C22F8118200E3D410 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F20DC6D522F7241D006FE74D /* Main.storyboard */ = {
@@ -366,7 +533,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 570976546C29205CCD04C32D /* Pods-iserTeknikBeta.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iserTeknikBeta/iserTeknikBeta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
@@ -374,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.webfirmam.iserTeknikBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erdogan.iserteknikbeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -385,7 +554,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9F69DD226BBFDBDBE527BF8 /* Pods-iserTeknikBeta.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iserTeknikBeta/iserTeknikBeta.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
@@ -393,8 +564,48 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.webfirmam.iserTeknikBeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erdogan.iserteknikbeta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2B8457022F8118200E3D410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A51B5ED6DB8145C6FFB0AA6 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24DZ882DDK;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.erdogan.iserteknikbeta.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2B8457122F8118200E3D410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50DED72C992917B8E4F14CEA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24DZ882DDK;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.erdogan.iserteknikbeta.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,6 +628,15 @@
 			buildConfigurations = (
 				F20DC6E122F7241E006FE74D /* Debug */,
 				F20DC6E222F7241E006FE74D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2B8456F22F8118200E3D410 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B8457022F8118200E3D410 /* Debug */,
+				F2B8457122F8118200E3D410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

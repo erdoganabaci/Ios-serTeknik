@@ -15,7 +15,11 @@ class SecondViewController: UIViewController , WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://iserteknik.webfirmam.com.tr/")
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let pushUrl = delegate.myUrl
+        print("second url geldi" , pushUrl)
+        //OneSignal.postNotification(["contents": ["en": "Test Message"], "include_player_ids": ["e0d822e5-8610-4255-845d-53b1a9591f99"]])
+        let url = URL(string: pushUrl )
         
         let request = URLRequest(url: url!)
         

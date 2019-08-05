@@ -7,16 +7,60 @@
 //
 
 import UIKit
-
+import OneSignal
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var myUrl = ""
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //directUrl()
+        FirebaseApp.configure()
+        
+        let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+            // This block gets called when the user reacts to a notification received
+            let payload: OSNotificationPayload? = result?.notification.payload
+            print("Message başlığı = \(payload!.title as! String)")
+            
+            print("Message içeriği = \(payload!.body as! String)")
+            print("merhaba")
+            //self.window?.rootViewController!.performSegue(withIdentifier: "toFirstViewControllerFromPush", sender: nil)
+            
+            
+            //            print("badge number = \(payload?.badge ?? 0)")
+            //            print("notification sound = \(payload?.sound ?? "None")")
+            
+            if let additionalData = result!.notification.payload!.additionalData {
+                print("additionalData = \(additionalData)")
+                let myurl = additionalData as! NSDictionary
+                print("url geldi " , myurl["myurl"] as! String )
+                let receivedUrl = myurl["myurl"] as! String
+                //eğer kullanıcı data yollarsa mai activitye yolla ordan url al appdelegete erişerek.
+                self.myUrl = receivedUrl
+                //self.applicationWillTerminate(UIApplication.init())
+                if(self.myUrl != ""){
+                    self.directUrl()
+                }
+            }
+        }
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        // Onesignal
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "e766b6a6-c39c-4848-aeb8-020e4b40ce57",
+                                        handleNotificationAction: notificationOpenedBlock,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
         return true
     }
 

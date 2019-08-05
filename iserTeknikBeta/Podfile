@@ -1,13 +1,28 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+target 'OneSignalNotificationServiceExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'OneSignal', '>= 2.6.2', '< 3.0'
+
+  # Pods for OneSignalNotificationServiceExtension
+
+end
+
 target 'iserTeknikBeta' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
- pod 'Alamofire', '~> 5.0.0-beta.5'
-pod 'lottie-ios'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'FirebaseUI/Auth'
+  pod 'Alamofire', '~> 5.0.0-beta.5' 
+  pod 'lottie-ios'
+  pod 'OneSignal', '>= 2.6.2', '< 3.0'
 
   # Pods for iserTeknikBeta
 
 end
+

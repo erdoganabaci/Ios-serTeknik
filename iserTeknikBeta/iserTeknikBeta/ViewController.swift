@@ -8,10 +8,16 @@
 
 import UIKit
 import WebKit
+import OneSignal
+import Firebase
 class ViewController: UIViewController ,WKNavigationDelegate{
     @IBOutlet weak var ActInd: UIActivityIndicatorView!
     
     @IBOutlet weak var webView: WKWebView!
+    var userID = ""
+    var uuidDb = ""
+    var userDeviceID = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,7 +25,7 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         navigationItem.title = "İser Teknik"
         // Do any additional setup after loading the view.
         let url = URL(string: "http://iserteknik.webfirmam.com.tr/")
-        
+        uuidDb = UUID().uuidString
         let request = URLRequest(url: url!)
 
         webView.load(request)
@@ -30,9 +36,77 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         webView.navigationDelegate = self
         //eğer barın animasyonu durdurursak gizlicek.
         ActInd.hidesWhenStopped = true
+        
+        let status : OSPermissionSubscriptionState =
+            OneSignal.getPermissionSubscriptionState()
+        userID = status.subscriptionStatus.userId
+        print("senin id: "+userID)
+        getAndSavePlayerIdFromFirebase()
+
        
     }
-
+    func getAndSavePlayerIdFromFirebase() {
+        let databaseReference = Database.database().reference()
+        //databaseReference.child("PlayerIDs").child(uuid).child("test").setValue("Deneme")
+        //database kayıt işlemleri
+        if userID != nil {
+            //databaseden sorgu yap
+            //print("your id :" , userID)
+            databaseReference.observe(.value) { (snapshot) in
+                if(snapshot.exists()){
+                    databaseReference.observe(DataEventType.childAdded) { (snapshot) in
+                        //print("veriler : " , snapshot.value)
+                        
+                        let values = snapshot.value as! NSDictionary
+                        print("değerlerim: " , values.allKeys)
+                        let postID = values.allKeys
+                        
+                        for id in postID{
+                            let singlePost = values[id] as! NSDictionary
+                            print("Benimki ",singlePost["playerID"] as! String)
+                            let deviceId = singlePost["playerID"] as! String
+                            self.userDeviceID.append(deviceId)
+                        }
+                        print("mylist " , self.userDeviceID)
+                        
+                        
+                        
+                        if(!self.userDeviceID.contains(self.userID)){
+                            print("içeriyor mu ?" , self.userDeviceID.contains(self.userID))
+                            print("user device idler" , self.userID)
+                            print("my id is " , self.userID)
+                            //self.userDeviceID.append(self.userID)
+                            //eğer device id databasede yoksa ekle
+                            let databaseNewReference = Database.database().reference()
+                            databaseReference.child("PlayerIDs").child(self.uuidDb).child("playerID").setValue(self.userID)
+                            //databaseNewReference.child("PlayerIDs").child("mykey").child("post").child(self.uuid).child("playerID").setValue(self.userID)
+                        }
+                        
+                        
+                        
+                    }
+                }else{
+                    if(!self.userDeviceID.contains(self.userID)){
+                        print("içeriyor mu ?" , self.userDeviceID.contains(self.userID))
+                        print("user device idler" , self.userID)
+                        print("my id is " , self.userID)
+                        self.userDeviceID.append(self.userID)
+                        //eğer device id databasede yoksa ekle
+                        let databaseNewReference = Database.database().reference()
+                        databaseReference.child("PlayerIDs").child(self.uuidDb).child("playerID").setValue(self.userID)
+                        //databaseNewReference.child("PlayerIDs").child("mykey").child("post").child(self.uuid).child("playerID").setValue(self.userID)
+                    }
+                }
+                
+                
+                
+                
+            }
+            
+            
+        }
+        
+    }
     @IBAction func sendPushNotificationButtonClicked(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "toSendPushNotificationFromFirst", sender: nil)
     }

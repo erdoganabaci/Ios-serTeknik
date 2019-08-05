@@ -8,6 +8,8 @@
 
 import UIKit
 import Lottie
+import Firebase
+import OneSignal
 class SendPushViewController: UIViewController {
 
     @IBOutlet weak var notificationTitle: UITextField!
@@ -17,6 +19,7 @@ class SendPushViewController: UIViewController {
     @IBOutlet weak var animationLottie: AnimationView!
     var timer: Timer?
     var online = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         startAnimation()
@@ -26,12 +29,43 @@ class SendPushViewController: UIViewController {
             print("working")
             
         })
+        
+        
+        
     }
     
    
     
     @IBAction func notificationSendButtonClicked(_ sender: Any) {
-
+        let databaseReference = Database.database().reference()
+        databaseReference.observe(DataEventType.childAdded) { (snapshot) in
+            //print("veriler : " , snapshot.value)
+            
+            let values = snapshot.value as! NSDictionary
+            print("değerlerim: " , values.allKeys)
+            let postID = values.allKeys
+            
+            for id in postID{
+                let singlePost = values[id] as! NSDictionary
+                print("Benimki ",singlePost["playerID"] as! String)
+                let deviceId = singlePost["playerID"] as! String
+                //OneSignal.postNotification(["contents": ["en": "Test Message"], "include_player_ids": ["e0d822e5-8610-4255-845d-53b1a9591f99"]])
+                OneSignal.postNotification(["headings": ["en": "\(self.notificationTitle.text as! String)"],"contents": ["en": "\(self.notificationContent.text as! String)"],                "data": ["myurl": "\(self.notificationUrl.text as! String)"],
+                                            "include_player_ids": ["\(deviceId)"],"ios_badgeType" : "Increase", "ios_badgeCount" : 1])
+                
+                
+            }
+            
+        }
+        
+        let alert = UIAlertController(title: "Bildirim Gönderildi", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            //ok tıkladğında segue ile ilk aktiviteye gönderebilirsin.
+            self.performSegue(withIdentifier: "toFirstViewControllerFromPush", sender: nil)
+        }))
+        
+        self.present(alert, animated: true)
     }
     
 
