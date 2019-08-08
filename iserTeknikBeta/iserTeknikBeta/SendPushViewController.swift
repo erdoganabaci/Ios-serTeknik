@@ -54,7 +54,7 @@ class SendPushViewController: UIViewController {
                 let deviceId = singlePost["playerID"] as! String
                 //OneSignal.postNotification(["contents": ["en": "Test Message"], "include_player_ids": ["e0d822e5-8610-4255-845d-53b1a9591f99"]])
                 OneSignal.postNotification(["headings": ["en": "\(self.notificationTitle.text as! String)"],"contents": ["en": "\(self.notificationContent.text as! String)"],                "data": ["myurl": "\(self.notificationUrl.text as! String)"],
-                                            "include_player_ids": ["\(deviceId)"],"ios_badgeType" : "Increase", "ios_badgeCount" : 1])
+                                            "include_player_ids": ["\(deviceId)"]])
                 
                 
             }

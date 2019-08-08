@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //directUrl()
         FirebaseApp.configure()
         
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
             // This block gets called when the user reacts to a notification received
             let payload: OSNotificationPayload? = result?.notification.payload
@@ -58,9 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Recommend moving the below line to prompt for push after informing the user about
         //   how your app will use them.
-        OneSignal.promptForPushNotifications(userResponse: { accepted in
-            print("User accepted notifications: \(accepted)")
-        })
+      
         return true
     }
 
@@ -95,6 +97,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //çağır mainden yada çağırmana gerek yok direk değişkeni al myurl ile onu main viewcontrollere aktar
         
     }
+    
+  
 
 }
 

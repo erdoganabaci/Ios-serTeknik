@@ -20,8 +20,11 @@ class ViewController: UIViewController ,WKNavigationDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         // Do any additional setup after loading the view.
         //navigation title
+        //self.navigationController?.setNavigationBarHidden(false, animated: false)
+
         navigationItem.title = "İser Teknik"
         // Do any additional setup after loading the view.
         let url = URL(string: "http://iserteknik.webfirmam.com.tr/")
@@ -36,10 +39,19 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         webView.navigationDelegate = self
         //eğer barın animasyonu durdurursak gizlicek.
         ActInd.hidesWhenStopped = true
-        
         let status : OSPermissionSubscriptionState =
             OneSignal.getPermissionSubscriptionState()
-        userID = status.subscriptionStatus.userId
+      if(status.subscriptionStatus.userId != nil){
+            self.userID = status.subscriptionStatus.userId
+            print("geldi" , self.userID)
+            
+        }
+
+        
+       
+        
+    
+        
         print("senin id: "+userID)
         getAndSavePlayerIdFromFirebase()
 
@@ -49,7 +61,7 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         let databaseReference = Database.database().reference()
         //databaseReference.child("PlayerIDs").child(uuid).child("test").setValue("Deneme")
         //database kayıt işlemleri
-        if userID != nil {
+        if userID != nil 	 {
             //databaseden sorgu yap
             //print("your id :" , userID)
             databaseReference.observe(.value) { (snapshot) in
@@ -104,6 +116,8 @@ class ViewController: UIViewController ,WKNavigationDelegate{
             }
             
             
+        }else{
+            exit(0)
         }
         
     }
