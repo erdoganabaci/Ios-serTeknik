@@ -23,8 +23,14 @@ class ViewController: UIViewController ,WKNavigationDelegate{
        
         // Do any additional setup after loading the view.
         //navigation title
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+       // let controller = self.storyboard?.instantiateViewController(withIdentifier: "MainBoardApp")
+        //self.navigationController!.pushViewController(controller!, animated:true)
         //self.navigationController?.setNavigationBarHidden(false, animated: false)
-
+//        let vc = storyboard!.instantiateViewController(withIdentifier: "MainBoardApp") as! ViewController
+//        let navigationController = UINavigationController(rootViewController: vc)
+//        self.present(navigationController, animated: true, completion: nil)
+        
         navigationItem.title = "İser Teknik"
         // Do any additional setup after loading the view.
         let url = URL(string: "http://iserteknik.webfirmam.com.tr/")
@@ -117,7 +123,7 @@ class ViewController: UIViewController ,WKNavigationDelegate{
             
             
         }else{
-            exit(0)
+            //exit(0)
         }
         
     }

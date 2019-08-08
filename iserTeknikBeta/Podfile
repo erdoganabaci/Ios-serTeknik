@@ -21,6 +21,8 @@ target 'iserTeknikBeta' do
   pod 'Alamofire', '~> 5.0.0-beta.5' 
   pod 'lottie-ios'
   pod 'OneSignal', '>= 2.6.2', '< 3.0'
+  pod 'paper-onboarding'
+
 
   # Pods for iserTeknikBeta
 

@@ -24,6 +24,8 @@
 		F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457322F8177100E3D410 /* GoogleService-Info.plist */; };
 		F2B8457622F8639100E3D410 /* mobile.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457522F8639100E3D410 /* mobile.json */; };
 		F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */; };
+		F2BA084C22FC3FC7004257D5 /* DemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */; };
+		F2BA084E22FC4167004257D5 /* OnboardingViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		F2B8457322F8177100E3D410 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2B8457522F8639100E3D410 /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
 		F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iserteknik-logo.jpg"; sourceTree = "<group>"; };
+		F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScreen.swift; sourceTree = "<group>"; };
+		F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				F23A377122F79E450090A2D0 /* teknik.json */,
 				F23A376F22F799240090A2D0 /* loading.json */,
 				F20DC6D122F7241D006FE74D /* AppDelegate.swift */,
+				F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */,
+				F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */,
 				F20DC6D322F7241D006FE74D /* ViewController.swift */,
 				F20DC6E522F724B1006FE74D /* SecondViewController.swift */,
 				F20DC6E322F7249B006FE74D /* SendPushViewController.swift */,
@@ -372,6 +378,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BA084E22FC4167004257D5 /* OnboardingViewClass.swift in Sources */,
+				F2BA084C22FC3FC7004257D5 /* DemoScreen.swift in Sources */,
 				F20DC6E622F724B1006FE74D /* SecondViewController.swift in Sources */,
 				F20DC6D422F7241D006FE74D /* ViewController.swift in Sources */,
 				F20DC6E422F7249B006FE74D /* SendPushViewController.swift in Sources */,

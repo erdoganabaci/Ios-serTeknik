@@ -13,11 +13,27 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var myUrl = ""
     var window: UIWindow?
+    var userData = UserDefaults.standard
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //directUrl()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        var firstVC = storyBoard.instantiateViewController(withIdentifier: "DemoBoardApp")
+        
+        
+        if userData.bool(forKey: "demoCompleted") {
+            firstVC = storyBoard.instantiateViewController(withIdentifier: "MainBoardApp")
+            
+        }
+        
+        window?.rootViewController = firstVC
+       //window?.makeKeyAndVisible()
+        
         FirebaseApp.configure()
         
         OneSignal.promptForPushNotifications(userResponse: { accepted in
