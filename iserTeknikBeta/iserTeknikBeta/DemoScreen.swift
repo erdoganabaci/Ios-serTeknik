@@ -52,8 +52,10 @@ extension DemoScreen: PaperOnboardingDataSource, PaperOnboardingDelegate  {
         let firstImage = #imageLiteral(resourceName: "illustration") // Image literal
         let secondImage = #imageLiteral(resourceName: "card-1")
         let thirdImage = #imageLiteral(resourceName: "post-1")
-        let fourthImage = #imageLiteral(resourceName: "iserteknik")
-        let fiveImage = #imageLiteral(resourceName: "screenShot")
+        let fourthImage = #imageLiteral(resourceName: "yeni resim")
+        let fiveImage = #imageLiteral(resourceName: "yeni resim 2")
+        let sixImage = #imageLiteral(resourceName: "yeni resim 3")
+        let iserlogo = #imageLiteral(resourceName: "iserteknik")
         let activeImage = #imageLiteral(resourceName: "active")
         let bgArray = [#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)] // Color literal
         let titleFont = UIFont(name: "HelveticaNeue-Bold", size:  18.0)!
@@ -63,11 +65,11 @@ extension DemoScreen: PaperOnboardingDataSource, PaperOnboardingDelegate  {
 
         var arrayToReturn = [OnboardingItemInfo]()
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: fiveImage, title: "Beer", description: "Beer is awesome", pageIcon: activeImage, color: bgArray[0], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: iserlogo, title: "Açılış Ekranı", description: "Bildirim için Kaleme Tıklayın", pageIcon: activeImage, color: bgArray[0], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: secondImage, title: "Smthng", description: "Smthng", pageIcon: activeImage, color: bgArray[1], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: fiveImage, title: "Bildirim Ekranı", description: "Bildirim Atmak İçin Göndere Tıklayın", pageIcon: activeImage, color: bgArray[1], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: thirdImage, title: "Smthng", description: "Smthng", pageIcon: activeImage, color: bgArray[2], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: sixImage, title: "Mesajınız Gönderildi", description: "Uygulamaya Geçebilirsiniz", pageIcon: activeImage, color: bgArray[2], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
         
 

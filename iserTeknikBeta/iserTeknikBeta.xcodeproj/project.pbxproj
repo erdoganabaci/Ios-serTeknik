@@ -26,6 +26,10 @@
 		F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */; };
 		F2BA084C22FC3FC7004257D5 /* DemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */; };
 		F2BA084E22FC4167004257D5 /* OnboardingViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */; };
+		F2BA085222FC6A4C004257D5 /* jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085122FC6A4C004257D5 /* jobs.png */; };
+		F2BA085622FC70AE004257D5 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085322FC70AD004257D5 /* 2.jpeg */; };
+		F2BA085722FC70AE004257D5 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085422FC70AE004257D5 /* 1.jpeg */; };
+		F2BA085822FC70AE004257D5 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085522FC70AE004257D5 /* 3.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iserteknik-logo.jpg"; sourceTree = "<group>"; };
 		F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScreen.swift; sourceTree = "<group>"; };
 		F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewClass.swift; sourceTree = "<group>"; };
+		F2BA085122FC6A4C004257D5 /* jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jobs.png; sourceTree = "<group>"; };
+		F2BA085322FC70AD004257D5 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		F2BA085422FC70AE004257D5 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		F2BA085522FC70AE004257D5 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +145,11 @@
 		F20DC6D022F7241D006FE74D /* iserTeknikBeta */ = {
 			isa = PBXGroup;
 			children = (
+				F2BA085422FC70AE004257D5 /* 1.jpeg */,
+				F2BA085322FC70AD004257D5 /* 2.jpeg */,
+				F2BA085522FC70AE004257D5 /* 3.jpeg */,
 				F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */,
+				F2BA085122FC6A4C004257D5 /* jobs.png */,
 				F2B8456222F8081300E3D410 /* iserTeknikBeta.entitlements */,
 				F2B8457522F8639100E3D410 /* mobile.json */,
 				F23A377122F79E450090A2D0 /* teknik.json */,
@@ -272,6 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BA085722FC70AE004257D5 /* 1.jpeg in Resources */,
+				F2BA085622FC70AE004257D5 /* 2.jpeg in Resources */,
 				F23A377222F79E460090A2D0 /* teknik.json in Resources */,
 				F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */,
 				F20DC6DC22F7241E006FE74D /* LaunchScreen.storyboard in Resources */,
@@ -279,6 +293,8 @@
 				F2B8457622F8639100E3D410 /* mobile.json in Resources */,
 				F23A377022F799240090A2D0 /* loading.json in Resources */,
 				F20DC6D922F7241E006FE74D /* Assets.xcassets in Resources */,
+				F2BA085822FC70AE004257D5 /* 3.jpeg in Resources */,
+				F2BA085222FC6A4C004257D5 /* jobs.png in Resources */,
 				F20DC6D722F7241D006FE74D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,6 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
