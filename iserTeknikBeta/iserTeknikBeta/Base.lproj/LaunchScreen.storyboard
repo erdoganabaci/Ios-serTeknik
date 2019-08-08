@@ -17,7 +17,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iserteknik-logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-qu-mVx">
+                                <rect key="frame" x="139" y="408" width="153" height="89"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80262531725888331" green="0.80262531725888331" blue="0.80262531725888331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y0w-qu-mVx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="4.5" id="k8s-xp-PU6"/>
+                            <constraint firstItem="y0w-qu-mVx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="8.5" id="wKh-ap-ZHg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -26,4 +35,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iserteknik-logo.jpg" width="137" height="80"/>
+    </resources>
 </document>

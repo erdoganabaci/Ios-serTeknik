@@ -17,12 +17,15 @@ class SendPushViewController: UIViewController {
     @IBOutlet weak var notificationUrl: UITextField!
     @IBOutlet weak var onlineLabel: UILabel!
     @IBOutlet weak var animationLottie: AnimationView!
+    @IBOutlet weak var animationProfile: AnimationView!
+    
     var timer: Timer?
     var online = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         startAnimation()
+        startAnimationProfile()
         // 5sn bir otomatik online kullanıcı sayısını çeker
         self.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (timer) in
             self.autoOnlineUser()
@@ -122,7 +125,7 @@ class SendPushViewController: UIViewController {
                         DispatchQueue.main.async {
                             //print(jsonResult)
                             let online = jsonResult["online"] as! String
-                            self.onlineLabel.text = "Online Auto: \(online)"
+                            self.onlineLabel.text = "Onlines: \(online)"
                             
                             
                             //print(online)
@@ -137,7 +140,13 @@ class SendPushViewController: UIViewController {
         task.resume()
     }
     
-    
+    func startAnimationProfile(){
+        animationProfile.animation = Animation.named("mobile")
+        //animationLottie.contentMode = UIView.ContentMode.scaleAspectFit
+        animationProfile.loopMode = LottieLoopMode.loop
+        
+        animationProfile.play()
+    }
     func startAnimation(){
         animationLottie.animation = Animation.named("loading")
         //animationLottie.contentMode = UIView.ContentMode.scaleAspectFit

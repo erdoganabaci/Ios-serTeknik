@@ -23,6 +23,7 @@
 		F2B8456E22F8118200E3D410 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457322F8177100E3D410 /* GoogleService-Info.plist */; };
 		F2B8457622F8639100E3D410 /* mobile.json in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457522F8639100E3D410 /* mobile.json */; };
+		F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		F2B8456B22F8118200E3D410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2B8457322F8177100E3D410 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2B8457522F8639100E3D410 /* mobile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobile.json; sourceTree = "<group>"; };
+		F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iserteknik-logo.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		F20DC6D022F7241D006FE74D /* iserTeknikBeta */ = {
 			isa = PBXGroup;
 			children = (
+				F2B8457B22F8688B00E3D410 /* iserteknik-logo.jpg */,
 				F2B8456222F8081300E3D410 /* iserTeknikBeta.entitlements */,
 				F2B8457522F8639100E3D410 /* mobile.json */,
 				F23A377122F79E450090A2D0 /* teknik.json */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F23A377222F79E460090A2D0 /* teknik.json in Resources */,
+				F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */,
 				F20DC6DC22F7241E006FE74D /* LaunchScreen.storyboard in Resources */,
 				F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */,
 				F2B8457622F8639100E3D410 /* mobile.json in Resources */,
