@@ -141,7 +141,6 @@
                                             <action selector="stop:" destination="dUE-HE-Jpf" id="489-LK-zZO"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="add" id="yzD-df-VhE"/>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuP-Da-bkC">
@@ -221,7 +220,7 @@
                                                     <constraint firstAttribute="width" constant="197" id="UkK-aU-Tm0"/>
                                                     <constraint firstAttribute="height" constant="59" id="X4a-iD-7WB"/>
                                                 </constraints>
-                                                <state key="normal" title="Online Yenile"/>
+                                                <state key="normal" title="Yenile"/>
                                                 <connections>
                                                     <action selector="onlineButtonClicked:" destination="Daa-HY-6uO" eventType="touchUpInside" id="mQA-QZ-JaS"/>
                                                 </connections>
@@ -429,6 +428,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CRK-4K-4XE"/>
-        <segue reference="OM4-wq-Gu0"/>
+        <segue reference="f7W-F3-xal"/>
     </inferredMetricsTieBreakers>
 </document>

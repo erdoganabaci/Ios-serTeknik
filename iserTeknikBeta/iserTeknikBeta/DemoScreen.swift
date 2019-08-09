@@ -44,7 +44,7 @@ extension DemoScreen: PaperOnboardingDataSource, PaperOnboardingDelegate  {
     
     // DataSource functions
     func onboardingItemsCount() -> Int {
-        return 3
+        return 4
     }
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
@@ -56,36 +56,43 @@ extension DemoScreen: PaperOnboardingDataSource, PaperOnboardingDelegate  {
         let fiveImage = #imageLiteral(resourceName: "yeni resim 2")
         let sixImage = #imageLiteral(resourceName: "yeni resim 3")
         let iserlogo = #imageLiteral(resourceName: "iserteknik")
+        let iserFirst = #imageLiteral(resourceName: "first")
+        let iserSecond = #imageLiteral(resourceName: "second")
+        let iserThird = #imageLiteral(resourceName: "third")
+        let iserFourth = #imageLiteral(resourceName: "fourth")
+        let iserSecondNew = #imageLiteral(resourceName: "secondnew")
+
+
         let activeImage = #imageLiteral(resourceName: "active")
-        let bgArray = [#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)] // Color literal
-        let titleFont = UIFont(name: "HelveticaNeue-Bold", size:  18.0)!
-        let descFont = UIFont(name: "HelveticaNeue", size: 14.0)!
+        let bgArray = [#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)] // Color literal
+        let titleFont = UIFont(name: "HelveticaNeue-Bold", size:  20.0)!
+        let descFont = UIFont(name: "HelveticaNeue", size: 17.0)!
         let titleColor = UIColor.white
         let descColor = UIColor.white
 
         var arrayToReturn = [OnboardingItemInfo]()
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: iserlogo, title: "Açılış Ekranı", description: "Bildirim için Kaleme Tıklayın", pageIcon: activeImage, color: bgArray[0], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: iserFirst, title: "Açılış Ekranı", description: "Bildirim Göndermek için Kaleme Tıklayın", pageIcon: activeImage, color: bgArray[0], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: fiveImage, title: "Bildirim Ekranı", description: "Bildirim Atmak İçin Göndere Tıklayın", pageIcon: activeImage, color: bgArray[1], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: iserSecondNew, title: "Bildirim Ekranı", description: "Bildirim Atmak İçin Göndere Tıklayın", pageIcon: activeImage, color: bgArray[1], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
-        arrayToReturn.append(OnboardingItemInfo(informationImage: sixImage, title: "Mesajınız Gönderildi", description: "Uygulamaya Geçebilirsiniz", pageIcon: activeImage, color: bgArray[2], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
+        arrayToReturn.append(OnboardingItemInfo(informationImage: iserThird, title: "Aktif Kullanıcılar", description: "Sitenize Giriş Yapan Aktif Kullanıcıları Görebilirsiniz.", pageIcon: activeImage, color: bgArray[2], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
         
-        
+        arrayToReturn.append(OnboardingItemInfo(informationImage: iserFourth, title: "Mesajınız Gönderildi", description: "Uygulamaya Geçebilirsiniz", pageIcon: activeImage, color: bgArray[3], titleColor: titleColor, descriptionColor: descColor, titleFont: titleFont, descriptionFont: descFont))
 
         return arrayToReturn[index]
     }
     
     // Delegate Methods
     func onboardingDidTransitonToIndex(_ index: Int) {
-        if index  == 2 {
+        if index  == 3 {
             doneButtonOutlet.isHidden = false
             skipButtonOutlet.isHidden = true
         }
     }
     
     func onboardingWillTransitonToIndex(_ index: Int) {
-        if index != 2 {
+        if index != 3 {
             if doneButtonOutlet.isHidden == false {
                 doneButtonOutlet.isHidden = true
                 skipButtonOutlet.isHidden = false
