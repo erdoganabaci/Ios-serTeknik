@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,37 +15,39 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jobs.png" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-qu-mVx">
-                                <rect key="frame" x="127" y="304" width="160" height="142"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İserTeknik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-dI-KKe">
-                                <rect key="frame" x="127" y="503" width="154" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="gPp-8U-qt5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-nd-PnS">
+                                <rect key="frame" x="85" y="151" width="150" height="178"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İserTeknik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsw-dI-KKe">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="28"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jobs.png" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-qu-mVx">
+                                        <rect key="frame" x="0.0" y="28" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4t4-ho-DLb"/>
+                                            <constraint firstAttribute="width" constant="150" id="rH9-Jb-PvW"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rsw-dI-KKe" firstAttribute="centerX" secondItem="y0w-qu-mVx" secondAttribute="centerX" constant="-3" id="G7i-UY-mIC"/>
-                            <constraint firstItem="y0w-qu-mVx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KaL-FG-sW1"/>
-                            <constraint firstItem="rsw-dI-KKe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="Rmo-kB-3LE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rsw-dI-KKe" secondAttribute="bottom" constant="310" id="TqI-4S-0yK"/>
-                            <constraint firstItem="rsw-dI-KKe" firstAttribute="top" secondItem="y0w-qu-mVx" secondAttribute="bottom" constant="57" id="W7f-Gc-lxZ"/>
-                            <constraint firstItem="y0w-qu-mVx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-73" id="vI2-if-BPk"/>
+                            <constraint firstItem="Gb7-nd-PnS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QsE-3G-45z"/>
+                            <constraint firstItem="Gb7-nd-PnS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ubQ-A6-BPv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.625" y="375"/>
         </scene>
     </scenes>
     <resources>

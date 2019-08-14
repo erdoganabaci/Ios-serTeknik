@@ -64,7 +64,7 @@ extension DemoScreen: PaperOnboardingDataSource, PaperOnboardingDelegate  {
 
 
         let activeImage = #imageLiteral(resourceName: "active")
-        let bgArray = [#colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1),#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)] // Color literal
+        let bgArray = [#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1), #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1),#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)] // Color literal
         let titleFont = UIFont(name: "HelveticaNeue-Bold", size:  20.0)!
         let descFont = UIFont(name: "HelveticaNeue", size: 17.0)!
         let titleColor = UIColor.white

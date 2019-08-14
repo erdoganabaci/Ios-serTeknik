@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 import Firebase
 import OneSignal
-class SendPushViewController: UIViewController {
+class SendPushViewController: UIViewController , UITextFieldDelegate {
 
     @IBOutlet weak var notificationTitle: UITextField!
     @IBOutlet weak var notificationContent: UITextField!
@@ -26,6 +26,7 @@ class SendPushViewController: UIViewController {
         super.viewDidLoad()
         startAnimation()
         startAnimationProfile()
+        notificationUrl.delegate = self
         // 5sn bir otomatik online kullanıcı sayısını çeker
         self.timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { (timer) in
             self.autoOnlineUser()
@@ -153,6 +154,15 @@ class SendPushViewController: UIViewController {
         animationLottie.loopMode = LottieLoopMode.loop
         
         animationLottie.play()
+    }
+    
+    @IBAction func backPresentNavigation(_ sender: Any) {
+        print("present back")
+        self.dismiss(animated: true, completion: nil)
+    }
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        notificationUrl.resignFirstResponder()
+        return true
     }
     
 }
