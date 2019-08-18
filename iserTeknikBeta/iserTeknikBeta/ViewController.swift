@@ -34,6 +34,7 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         navigationItem.title = "İser Teknik"
         // Do any additional setup after loading the view.
         let url = URL(string: "http://iserteknik.webfirmam.com.tr/")
+
         uuidDb = UUID().uuidString
         let request = URLRequest(url: url!)
 

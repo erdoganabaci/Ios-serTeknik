@@ -19,6 +19,10 @@
 		F20DC6E922F776B8006FE74D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20DC6E822F776B8006FE74D /* WebKit.framework */; };
 		F23A377022F799240090A2D0 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F23A376F22F799240090A2D0 /* loading.json */; };
 		F23A377222F79E460090A2D0 /* teknik.json in Resources */ = {isa = PBXBuildFile; fileRef = F23A377122F79E450090A2D0 /* teknik.json */; };
+		F29A4578230952D400988B34 /* bg-gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F29A4577230952D400988B34 /* bg-gradient.jpg */; };
+		F29A457A2309542500988B34 /* bg-mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F29A45792309542400988B34 /* bg-mountain.jpg */; };
+		F29A457C230967F300988B34 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A457B230967F300988B34 /* WelcomeViewController.swift */; };
+		F29A457E23096A5000988B34 /* DemoScreenPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29A457D23096A5000988B34 /* DemoScreenPublic.swift */; };
 		F2B8456A22F8118200E3D410 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8456922F8118200E3D410 /* NotificationService.swift */; };
 		F2B8456E22F8118200E3D410 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B8457322F8177100E3D410 /* GoogleService-Info.plist */; };
@@ -75,6 +79,10 @@
 		F20DC6E822F776B8006FE74D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F23A376F22F799240090A2D0 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F23A377122F79E450090A2D0 /* teknik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teknik.json; sourceTree = "<group>"; };
+		F29A4577230952D400988B34 /* bg-gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-gradient.jpg"; sourceTree = "<group>"; };
+		F29A45792309542400988B34 /* bg-mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg-mountain.jpg"; sourceTree = "<group>"; };
+		F29A457B230967F300988B34 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F29A457D23096A5000988B34 /* DemoScreenPublic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScreenPublic.swift; sourceTree = "<group>"; };
 		F2B8456222F8081300E3D410 /* iserTeknikBeta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iserTeknikBeta.entitlements; sourceTree = "<group>"; };
 		F2B8456722F8118200E3D410 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B8456922F8118200E3D410 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -145,6 +153,8 @@
 		F20DC6D022F7241D006FE74D /* iserTeknikBeta */ = {
 			isa = PBXGroup;
 			children = (
+				F29A45792309542400988B34 /* bg-mountain.jpg */,
+				F29A4577230952D400988B34 /* bg-gradient.jpg */,
 				F2BA085422FC70AE004257D5 /* 1.jpeg */,
 				F2BA085322FC70AD004257D5 /* 2.jpeg */,
 				F2BA085522FC70AE004257D5 /* 3.jpeg */,
@@ -156,10 +166,12 @@
 				F23A376F22F799240090A2D0 /* loading.json */,
 				F20DC6D122F7241D006FE74D /* AppDelegate.swift */,
 				F2BA084B22FC3FC7004257D5 /* DemoScreen.swift */,
+				F29A457D23096A5000988B34 /* DemoScreenPublic.swift */,
 				F2BA084D22FC4166004257D5 /* OnboardingViewClass.swift */,
 				F20DC6D322F7241D006FE74D /* ViewController.swift */,
 				F20DC6E522F724B1006FE74D /* SecondViewController.swift */,
 				F20DC6E322F7249B006FE74D /* SendPushViewController.swift */,
+				F29A457B230967F300988B34 /* WelcomeViewController.swift */,
 				F20DC6D522F7241D006FE74D /* Main.storyboard */,
 				F20DC6D822F7241E006FE74D /* Assets.xcassets */,
 				F20DC6DA22F7241E006FE74D /* LaunchScreen.storyboard */,
@@ -290,8 +302,10 @@
 				F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */,
 				F20DC6DC22F7241E006FE74D /* LaunchScreen.storyboard in Resources */,
 				F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */,
+				F29A4578230952D400988B34 /* bg-gradient.jpg in Resources */,
 				F2B8457622F8639100E3D410 /* mobile.json in Resources */,
 				F23A377022F799240090A2D0 /* loading.json in Resources */,
+				F29A457A2309542500988B34 /* bg-mountain.jpg in Resources */,
 				F20DC6D922F7241E006FE74D /* Assets.xcassets in Resources */,
 				F2BA085822FC70AE004257D5 /* 3.jpeg in Resources */,
 				F2BA085222FC6A4C004257D5 /* jobs.png in Resources */,
@@ -399,7 +413,9 @@
 				F20DC6E622F724B1006FE74D /* SecondViewController.swift in Sources */,
 				F20DC6D422F7241D006FE74D /* ViewController.swift in Sources */,
 				F20DC6E422F7249B006FE74D /* SendPushViewController.swift in Sources */,
+				F29A457E23096A5000988B34 /* DemoScreenPublic.swift in Sources */,
 				F20DC6D222F7241D006FE74D /* AppDelegate.swift in Sources */,
+				F29A457C230967F300988B34 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +583,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24DZ882DDK;
 				INFOPLIST_FILE = iserTeknikBeta/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

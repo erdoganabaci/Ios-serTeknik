@@ -23,13 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        var firstVC = storyBoard.instantiateViewController(withIdentifier: "DemoBoardApp")
+        //var firstVC = storyBoard.instantiateViewController(withIdentifier: "DemoBoardApp")
+        //var firstVC = storyBoard.instantiateViewController(withIdentifier: "MainBoardApp")
+        var firstVC = storyBoard.instantiateViewController(withIdentifier: "DemoPeopleBoardApp")
+
         
-        
-        if userData.bool(forKey: "demoCompleted") {
+      /*  if userData.bool(forKey: "demoCompleted") {
             firstVC = storyBoard.instantiateViewController(withIdentifier: "MainBoardApp")
             
-        }
+        }*/
+        
+        if userData.bool(forKey: "demoCompleted") {
+         firstVC = storyBoard.instantiateViewController(withIdentifier: "welcomeScreen")
+         
+         }
         
         window?.rootViewController = firstVC
        //window?.makeKeyAndVisible()
