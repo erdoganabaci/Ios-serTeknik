@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Floaty.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -69,7 +74,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>OneSignal.xcscheme</key>
+		<key>OneSignal-iOS11.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OneSignal-iOS12.2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

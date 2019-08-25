@@ -22,6 +22,7 @@ target 'iserTeknikBeta' do
   pod 'lottie-ios'
   pod 'OneSignal', '>= 2.6.2', '< 3.0'
   pod 'paper-onboarding'
+  pod 'Floaty', '~> 4.2.0'
 
 
   # Pods for iserTeknikBeta

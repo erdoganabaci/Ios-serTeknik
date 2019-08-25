@@ -10,9 +10,11 @@ import UIKit
 import WebKit
 import OneSignal
 import Firebase
+import Floaty
 class ViewController: UIViewController ,WKNavigationDelegate{
     @IBOutlet weak var ActInd: UIActivityIndicatorView!
     
+    @IBOutlet weak var floaty: Floaty!
     @IBOutlet weak var webView: WKWebView!
     var userID = ""
     var uuidDb = ""
@@ -21,6 +23,12 @@ class ViewController: UIViewController ,WKNavigationDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        floaty.addItem("İletişim",icon: UIImage(named: "phone")!,handler:{_ in
+            self.performSegue(withIdentifier: "fabPresent", sender: nil)
+        })
+       
+        self.view.addSubview(floaty)
+
         // Do any additional setup after loading the view.
         //navigation title
         //let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -165,6 +173,13 @@ class ViewController: UIViewController ,WKNavigationDelegate{
         
         //internet kontrolü yapılcak
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fabPresent" {
+            if let popupVC = segue.destination as? PopupVC {
+                popupVC.popUpContextName = "Tel: 0216 523 33 13 / 0532 373 35 81 "
+            }
+        }
     }
 }
 

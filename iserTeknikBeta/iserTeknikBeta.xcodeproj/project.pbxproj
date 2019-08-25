@@ -34,6 +34,8 @@
 		F2BA085622FC70AE004257D5 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085322FC70AD004257D5 /* 2.jpeg */; };
 		F2BA085722FC70AE004257D5 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085422FC70AE004257D5 /* 1.jpeg */; };
 		F2BA085822FC70AE004257D5 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2BA085522FC70AE004257D5 /* 3.jpeg */; };
+		F2C409A12312B6FF00E9F2E4 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C409A02312B6FF00E9F2E4 /* PopupVC.swift */; };
+		F2C409A32313092500E9F2E4 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C409A22313092400E9F2E4 /* phone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		F2BA085322FC70AD004257D5 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		F2BA085422FC70AE004257D5 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		F2BA085522FC70AE004257D5 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		F2C409A02312B6FF00E9F2E4 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
+		F2C409A22313092400E9F2E4 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 		F20DC6D022F7241D006FE74D /* iserTeknikBeta */ = {
 			isa = PBXGroup;
 			children = (
+				F2C409A22313092400E9F2E4 /* phone.png */,
 				F29A45792309542400988B34 /* bg-mountain.jpg */,
 				F29A4577230952D400988B34 /* bg-gradient.jpg */,
 				F2BA085422FC70AE004257D5 /* 1.jpeg */,
@@ -172,6 +177,7 @@
 				F20DC6E522F724B1006FE74D /* SecondViewController.swift */,
 				F20DC6E322F7249B006FE74D /* SendPushViewController.swift */,
 				F29A457B230967F300988B34 /* WelcomeViewController.swift */,
+				F2C409A02312B6FF00E9F2E4 /* PopupVC.swift */,
 				F20DC6D522F7241D006FE74D /* Main.storyboard */,
 				F20DC6D822F7241E006FE74D /* Assets.xcassets */,
 				F20DC6DA22F7241E006FE74D /* LaunchScreen.storyboard */,
@@ -302,6 +308,7 @@
 				F2B8457C22F8688C00E3D410 /* iserteknik-logo.jpg in Resources */,
 				F20DC6DC22F7241E006FE74D /* LaunchScreen.storyboard in Resources */,
 				F2B8457422F8177100E3D410 /* GoogleService-Info.plist in Resources */,
+				F2C409A32313092500E9F2E4 /* phone.png in Resources */,
 				F29A4578230952D400988B34 /* bg-gradient.jpg in Resources */,
 				F2B8457622F8639100E3D410 /* mobile.json in Resources */,
 				F23A377022F799240090A2D0 /* loading.json in Resources */,
@@ -414,6 +421,7 @@
 				F20DC6D422F7241D006FE74D /* ViewController.swift in Sources */,
 				F20DC6E422F7249B006FE74D /* SendPushViewController.swift in Sources */,
 				F29A457E23096A5000988B34 /* DemoScreenPublic.swift in Sources */,
+				F2C409A12312B6FF00E9F2E4 /* PopupVC.swift in Sources */,
 				F20DC6D222F7241D006FE74D /* AppDelegate.swift in Sources */,
 				F29A457C230967F300988B34 /* WelcomeViewController.swift in Sources */,
 			);

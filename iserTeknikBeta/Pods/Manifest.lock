@@ -43,6 +43,7 @@ PODS:
   - FirebaseUI/Auth (8.0.4):
     - Firebase/Auth (~> 6.0)
     - GoogleUtilities/UserDefaults
+  - Floaty (4.2.0)
   - GoogleAppMeasurement (6.0.4):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -85,6 +86,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - FirebaseUI/Auth
+  - Floaty (~> 4.2.0)
   - lottie-ios
   - OneSignal (< 3.0, >= 2.6.2)
   - paper-onboarding
@@ -100,6 +102,7 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseInstanceID
     - FirebaseUI
+    - Floaty
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
@@ -119,6 +122,7 @@ SPEC CHECKSUMS:
   FirebaseDatabase: f48e067716864be2b855cf716b927ef375d6cfa0
   FirebaseInstanceID: 662b8108a09fe9ed01aafdedba100fde8536b0f6
   FirebaseUI: d92c980c1c7e553df3c5e7b0725baeb13f80f6d2
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   GoogleAppMeasurement: 183bd916af7f80deb67c01888368f1108d641832
   GoogleUtilities: d2b0e277a95962e09bb27f5cd42f5f0b6a506c7d
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
@@ -128,6 +132,6 @@ SPEC CHECKSUMS:
   OneSignal: 0f5ff711d9f25da54885e4ab06ef0abc221a46ef
   paper-onboarding: 47ded9ede6ae9dd7ec135dddd8bd3e170b79d799
 
-PODFILE CHECKSUM: 99be91322b97e398a1e13b85cdb58448b7f0662b
+PODFILE CHECKSUM: 236b41dab90ff189685033934ada98e5404050ee
 
 COCOAPODS: 1.7.5

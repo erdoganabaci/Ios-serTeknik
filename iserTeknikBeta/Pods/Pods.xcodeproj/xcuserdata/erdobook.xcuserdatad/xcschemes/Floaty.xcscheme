@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "210EB05CEC7AD9C148F90F752DE74C48"
-               BuildableName = "OneSignal"
-               BlueprintName = "OneSignal"
+               BlueprintIdentifier = "D2A775A88EA787684F2905BCB73F96D1"
+               BuildableName = "Floaty.framework"
+               BlueprintName = "Floaty"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

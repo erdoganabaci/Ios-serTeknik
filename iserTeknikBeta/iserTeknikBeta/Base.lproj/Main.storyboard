@@ -58,11 +58,16 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-N6-5kK">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
-                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKZ-04-tra">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKZ-04-tra">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="İserTeknik" id="pdA-ku-HRA">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Gz3-L0-TUh">
+                                        <barButtonItem key="leftBarButtonItem" title="Hakkımızda" id="Gah-iQ-g7k" customClass="aboutPresent">
+                                            <connections>
+                                                <segue destination="P9G-Ic-YbD" kind="presentation" id="U2q-jW-jwz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="compose" id="Gz3-L0-TUh">
                                             <connections>
                                                 <segue destination="Daa-HY-6uO" kind="presentation" id="bsp-c4-iPO"/>
                                             </connections>
@@ -70,6 +75,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljw-Ka-ziJ" customClass="Floaty" customModule="Floaty">
+                                <rect key="frame" x="369" y="773" width="45" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.99816394500000005" green="0.073704954980000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JKs-b8-k25"/>
+                                    <constraint firstAttribute="width" constant="45" id="adR-YQ-6GH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,7 +95,9 @@
                             <constraint firstItem="kKZ-04-tra" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M59-Z6-che"/>
                             <constraint firstItem="YSo-JP-KZs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Xnz-hO-Dnu"/>
                             <constraint firstItem="kKZ-04-tra" firstAttribute="bottom" secondItem="DA2-az-sbI" secondAttribute="top" id="XpF-VU-DAv"/>
+                            <constraint firstItem="YSo-JP-KZs" firstAttribute="top" secondItem="Ljw-Ka-ziJ" secondAttribute="bottom" id="Xzf-fz-Xlm"/>
                             <constraint firstAttribute="trailing" secondItem="kKZ-04-tra" secondAttribute="trailing" id="Yp9-hr-QRE"/>
+                            <constraint firstItem="Ljw-Ka-ziJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d9T-Jq-RUc"/>
                             <constraint firstItem="DA2-az-sbI" firstAttribute="trailing" secondItem="YSo-JP-KZs" secondAttribute="trailing" id="dLd-W0-AHL"/>
                             <constraint firstItem="g1G-N6-5kK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eMr-6D-BjH"/>
                             <constraint firstItem="kKZ-04-tra" firstAttribute="leading" secondItem="DA2-az-sbI" secondAttribute="leading" id="fJv-Me-z9y"/>
@@ -99,8 +115,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ActInd" destination="g1G-N6-5kK" id="q2R-Dx-xsw"/>
+                        <outlet property="floaty" destination="Ljw-Ka-ziJ" id="xs8-s2-eLk"/>
                         <outlet property="webView" destination="DA2-az-sbI" id="fdL-m4-LSI"/>
                         <segue destination="Daa-HY-6uO" kind="show" identifier="toSendPushNotificationFromFirst" id="CRK-4K-4XE"/>
+                        <segue destination="P9G-Ic-YbD" kind="presentation" identifier="fabPresent" id="WwW-14-deg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -404,6 +422,89 @@
             </objects>
             <point key="canvasLocation" x="1895.6521739130437" y="136.60714285714286"/>
         </scene>
+        <!--PopupVC-->
+        <scene sceneID="jxr-mU-mBO">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="P9G-Ic-YbD" customClass="PopupVC" customModule="iserTeknikBeta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3gY-Ja-gOB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNc-vZ-dZS">
+                                <rect key="frame" x="37" y="330" width="340" height="236"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-gradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O9v-TL-yBT">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="236"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMc-eJ-FIg">
+                                        <rect key="frame" x="0.0" y="206" width="340" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="0.34262628424657532" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OPu-oP-4cQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Kapat"/>
+                                        <connections>
+                                            <action selector="closePopup:" destination="P9G-Ic-YbD" eventType="touchUpInside" id="nHM-Ap-rtW"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İser Teknik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGm-JI-dgm">
+                                        <rect key="frame" x="63" y="8" width="215" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Xnd-dX-Xpq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rC9-n8-CtK">
+                                        <rect key="frame" x="0.0" y="82" width="340" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="bsT-sj-Alf"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="iw2-Pe-xtj"/>
+                                        </constraints>
+                                        <string key="text">İs &amp; Er Teknik; Viessmann,Dcd Baltur,Grundfos,Daikin,Kodsan,
+Riello,Gökçe Brülor Yetkili Servisidir.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uMc-eJ-FIg" secondAttribute="trailing" id="4aj-52-KJT"/>
+                                    <constraint firstAttribute="height" constant="236" id="4dS-yb-Isl"/>
+                                    <constraint firstAttribute="bottom" secondItem="uMc-eJ-FIg" secondAttribute="bottom" id="9oK-J3-IQ7"/>
+                                    <constraint firstItem="JGm-JI-dgm" firstAttribute="top" secondItem="xNc-vZ-dZS" secondAttribute="top" constant="8" id="ArN-4A-VbP"/>
+                                    <constraint firstAttribute="trailing" secondItem="JGm-JI-dgm" secondAttribute="trailing" constant="62" id="JwG-wC-xca"/>
+                                    <constraint firstItem="rC9-n8-CtK" firstAttribute="leading" secondItem="xNc-vZ-dZS" secondAttribute="leading" id="Ke5-3a-S9T"/>
+                                    <constraint firstItem="O9v-TL-yBT" firstAttribute="leading" secondItem="xNc-vZ-dZS" secondAttribute="leading" id="PTA-7q-srN"/>
+                                    <constraint firstAttribute="trailing" secondItem="rC9-n8-CtK" secondAttribute="trailing" id="d7C-Jg-57j"/>
+                                    <constraint firstAttribute="width" constant="340" id="eMD-Na-rlD"/>
+                                    <constraint firstAttribute="trailing" secondItem="O9v-TL-yBT" secondAttribute="trailing" id="iYL-2c-aot"/>
+                                    <constraint firstItem="rC9-n8-CtK" firstAttribute="centerY" secondItem="O9v-TL-yBT" secondAttribute="centerY" id="l50-vX-hv0"/>
+                                    <constraint firstItem="uMc-eJ-FIg" firstAttribute="leading" secondItem="xNc-vZ-dZS" secondAttribute="leading" id="nxX-aQ-IoI"/>
+                                    <constraint firstAttribute="bottom" secondItem="O9v-TL-yBT" secondAttribute="bottom" id="pqG-l8-meS"/>
+                                    <constraint firstItem="O9v-TL-yBT" firstAttribute="top" secondItem="xNc-vZ-dZS" secondAttribute="top" id="r1U-dC-4dV"/>
+                                    <constraint firstItem="JGm-JI-dgm" firstAttribute="leading" secondItem="xNc-vZ-dZS" secondAttribute="leading" constant="63" id="wXZ-9x-bfi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.26717679794520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xNc-vZ-dZS" firstAttribute="centerY" secondItem="3gY-Ja-gOB" secondAttribute="centerY" id="C6u-6N-lI4"/>
+                            <constraint firstItem="xNc-vZ-dZS" firstAttribute="centerX" secondItem="3gY-Ja-gOB" secondAttribute="centerX" id="UbP-vd-jAH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d7F-LZ-GuJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="popUpContentText" destination="rC9-n8-CtK" id="oGY-6R-neI"/>
+                        <outlet property="popupView" destination="xNc-vZ-dZS" id="CNY-bO-FNi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9is-i4-s1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.6376811594205" y="-589.28571428571422"/>
+        </scene>
         <!--Demo Screen-->
         <scene sceneID="2gB-0h-RQo">
             <objects>
@@ -544,9 +645,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg-gradient.jpg" width="753.205810546875" height="1409.2237548828125"/>
         <image name="bg-mountain.jpg" width="720" height="1440"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="WwW-14-deg"/>
         <segue reference="bsp-c4-iPO"/>
         <segue reference="ST4-dq-u6H"/>
         <segue reference="Kce-nB-xD4"/>
