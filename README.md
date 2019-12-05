@@ -5,15 +5,6 @@ When you write a blog automaticly sending notification all user.All users regist
 
 There are some images to understand how is work apps
 
-![First Image](https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/1.jpeg?raw=true)
+![First Image](https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/allios.gif?raw=true)
 
 
-https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/1.jpeg?raw=true
-
-https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/2%20bucuk.jpeg?raw=true
-
-https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/2.jpeg?raw=true
-
-https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/3.jpeg?raw=true
-
-https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/first.png?raw=true
