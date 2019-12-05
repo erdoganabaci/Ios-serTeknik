@@ -11,6 +11,12 @@ There are some images to understand how is work apps
 
 ![First Image](https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/allios.gif?raw=true)
 
+This is my hybrid database(Android,Ios) to keep user identified phones to send push notification.
+![Combine](https://github.com/erdoganabaci/Ios-serTeknik/blob/master/iserTeknikBeta/hybrid%20database.png?raw=true)
+
+
+
+
 
 
 
